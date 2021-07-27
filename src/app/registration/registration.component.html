@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row m-0">
+      <div class="col-12 col-md-12 col-lg-12 px-5 py-5">
+        <div class="card">
+          <div class="card-body">
+            <div class="row m-0">
+              <div class="col-12 col-md-12 col-lg-12">
+                <h2>Register</h2>
+              </div>
+            </div>
+            <div class="row m-0">
+              <div class="col-12 col-md-12 col-lg-12">
+                <label for="usr">Email <span style="color: red;">*</span></label>
+                <input type="text" class="form-control" id="email" [(ngModel)]="register.email">
+              </div>
+            </div>
+            <div class="row m-0">
+              <div class="col-12 col-md-12 col-lg-12">
+                <label for="usr">Password <span style="color: red;">*</span></label>
+                <input type="password" class="form-control" id="password" [(ngModel)]="register.pass">
+              </div>
+            </div>
+            <div class="row m-0">
+              <div class="col-12 col-md-12 col-lg-12">
+                <label for="usr">Confirm Password <span style="color: red;">*</span></label>
+                <input type="password" class="form-control" id="cpassword" [(ngModel)]="register.cpass">
+              </div>
+            </div>
+            <div class="row m-0">
+              <div class="col-12 col-md-12 col-lg-12">
+                <label for="usr">Phone</label>
+                <input type="text" class="form-control" id="phone" [(ngModel)]="register.phone">
+              </div>
+            </div>
+            <div class="row m-0" *ngIf="error">
+              <div class="col-12 col-md-12 col-lg-12">
+                <label class="text-danger">{{error}}</label>
+              </div>
+            </div>
+            <div class="row m-0 pt-5">
+              <div class="col-6 col-md-6 col-lg-6">
+                <button type="button" class="btn btn-primary" (click)="onRegister()">Register</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

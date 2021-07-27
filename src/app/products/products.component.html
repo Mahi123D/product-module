@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row m-0">
+        <div class="col-12 col-md-12 col-lg-12">
+            <h3>Products</h3>
+        </div>
+    </div>
+
+    <div class="row m-0 pb-2">
+        <div class="col-12 col-md-12 col-lg-12 text-right">
+            <button type="button" class="btn btn-success" (click)="addProduct()">Add-Product</button>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Product Name</th>
+                <th scope="col">Discription</th>
+                <th scope="col">price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products" style="cursor: pointer;" (click)="goToEdit(p._id)">
+                <td>{{p.productname}}</td>
+                <td>{{p.discription}}</td>
+                <td>{{p.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
